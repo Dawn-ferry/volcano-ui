@@ -4,10 +4,10 @@ import App from "./App.vue";
 // import store from "./store";
 import "./icons/iconfont.css";
 import "./style/base.scss";
-// import BeeUI from "../packages/index";
-import BeeUI from "../dist/volcano-ui.common";
-import '../dist/volcano-ui.css';
-Vue.use(BeeUI);
+
+import VolcanoUI from "../lib/volcano-ui.common";
+import '../lib/volcano-ui.css';
+Vue.use(VolcanoUI);
 // 关闭vue的提示
 Vue.config.productionTip = false;
 

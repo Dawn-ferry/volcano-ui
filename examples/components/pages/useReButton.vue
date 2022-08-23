@@ -24,6 +24,19 @@
       <re-button type="warning" round disabled>警告按钮</re-button>
       <re-button type="danger" round disabled>危险按钮</re-button>
     </div>
+
+    <div>
+      <re-button icon="re-icon-search" circle></re-button>
+      <re-button type="primary" icon="re-icon-edit" circle></re-button>
+      <re-button type="success" icon="re-icon-check" circle></re-button>
+      <re-button type="info" icon="re-icon-message" circle></re-button>
+      <re-button type="warning" icon="re-icon-star-off" circle></re-button>
+      <re-button type="danger" icon="re-icon-delete" circle></re-button>
+    </div>
+    <div>
+      <!-- <re-button type="text">文字按钮</re-button>
+      <re-button type="text" disabled>文字按钮</re-button>-->
+    </div>
   </div>
 </template>
 <script>
@@ -31,12 +44,6 @@ export default {
   name: "useReButton",
   data() {
     return {};
-  },
-  mounted() {},
-  methods: {
-    clickFn() {
-      console.log("11");
-    },
   },
 };
 </script>
