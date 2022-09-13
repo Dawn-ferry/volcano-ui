@@ -49,12 +49,6 @@ export default {
       default: false,
     },
   },
-  mounted() {
-    console.log("round", this.round);
-    console.log("circle", this.circle);
-    console.log("disabled", this.disabled);
-  },
-
   methods: {
     handleClick(e) {
       this.$emit("click", e);

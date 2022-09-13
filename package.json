@@ -1,8 +1,8 @@
 {
   "name": "volcano-ui",
-  "version": "1.0.0-beta",
+  "version": "1.0.1-Alpha",
   "private": false,
-  "license": "ISC",
+  "license": "MIT",
   "author": {
     "name": "hanshao",
     "email": "840136611@qq.com",

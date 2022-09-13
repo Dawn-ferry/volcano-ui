@@ -2,7 +2,7 @@
   <label class="re-checkbox" :class="{'is-checked': isChecked}">
     <span class="re-checkbox__input">
       <span class="re-checkbox__inner"></span>
-      <input type="checkbox" class="re-checkbox__original" :name="name" v-model="model" :value="label" />
+      <input type="checkbox" class="re-checkbox__original" :name="name" v-model="model" :value="label" :disabled="disabled" />
     </span>
     <span class="re-checkbox__label">
       <slot></slot>
@@ -19,6 +19,9 @@ export default {
       default: "",
     },
   },
+  mounted() {
+    // console.log("CheckboxGroup", this.CheckboxGroup);
+  },
   computed: {
     isGroup() {
       return !!this.CheckboxGroup;
@@ -28,6 +31,7 @@ export default {
         return this.isGroup ? this.CheckboxGroup.value : this.value;
       },
       set(value) {
+        // console.log("value", value);
         this.isGroup ? this.CheckboxGroup.$emit("input", value) : this.$emit("input", value);
       },
     },
@@ -49,6 +53,10 @@ export default {
     label: {
       type: String,
       default: "",
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
 };

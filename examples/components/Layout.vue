@@ -2,7 +2,9 @@
   <div class="Layout">
     <div class="introductionArea">
       <div class="logo"></div>
-      <div class="introduction"></div>
+      <div class="introduction">
+        <h1>volcano-ui</h1>
+      </div>
     </div>
     <div class="nav nav-tabs">
       <ul class="tablist">
@@ -23,6 +25,11 @@
         <UseCard v-if="name==='card'" />
         <UseButton v-else-if="name==='button'" />
         <UseInput v-else-if="name==='input'" />
+        <UseCheckbox v-else-if="name==='checkbox'" />
+        <UseRadio v-else-if="name==='radio'" />
+        <UseSwitch v-else-if="name==='switch'" />
+        <UseForm v-else-if="name==='form'" />
+        <UseDialog v-else-if="name==='dialog'" />
       </div>
     </div>
   </div>
@@ -36,6 +43,11 @@ export default {
     UseCard: () => import("./pages/useReCard.vue"),
     UseButton: () => import("./pages/useReButton.vue"),
     UseInput: () => import("./pages/useReInput.vue"),
+    UseCheckbox: () => import("./pages/useReCheckbox.vue"),
+    UseRadio: () => import("./pages/useReRadio.vue"),
+    UseSwitch: () => import("./pages/UseReSwitch.vue"),
+    UseForm: () => import("./pages/UseReForm.vue"),
+    UseDialog: () => import("./pages/UseReDialog.vue"),
   },
   data() {
     return {
@@ -46,6 +58,12 @@ export default {
         { name: "button", id: 2 },
         { name: "input", id: 3 },
         { name: "card", id: 4 },
+        { name: "checkbox", id: 5 },
+        { name: "radio", id: 6 },
+        { name: "switch", id: 7 },
+        { name: "form", id: 8 },
+        { name: "dialog", id: 9 },
+
         // { name: "table", id: 3 },
       ],
     };
@@ -65,9 +83,14 @@ $bgc: #e9ecef;
 .Layout {
   margin: 0 150px;
   .introductionArea {
+    text-align: center;
     padding: 32px 28px 16px 28px;
     margin-bottom: 28px;
     background-color: $bgc;
+    .introduction {
+      font-size: 28px;
+      font-weight: bold;
+    }
   }
   .nav {
     height: 109px;
@@ -96,7 +119,8 @@ $bgc: #e9ecef;
     // height: 350px;
     padding: 40px 28px 56px 28px;
     .github {
-      float: right;
+      display: flex;
+      justify-content: flex-end;
       .btn-secondary {
         width: 130px;
         height: 44px;

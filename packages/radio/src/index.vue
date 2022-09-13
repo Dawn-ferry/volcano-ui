@@ -2,7 +2,7 @@
   <label class="re-radio" :class="{'is-checked': label === model}">
     <span class="re-radio__input">
       <span class="re-radio__inner"></span>
-      <input class="re-radio__original" type="radio" :value="label" :name="name" v-model="model" />
+      <input class="re-radio__original" type="radio" :value="label" :name="name" v-model="model" :disabled="disabled" />
     </span>
     <span class="re-radio__label">
       <slot></slot>
@@ -42,6 +42,10 @@ export default {
     label: {
       type: [String, Number, Boolean],
       default: "",
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     },
     value: null,
     name: {

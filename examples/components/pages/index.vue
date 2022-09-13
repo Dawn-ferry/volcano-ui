@@ -1,5 +1,5 @@
 <template>
-  <div>welcome to use BeeUI</div>
+  <div>welcome to use volcano-ui</div>
 </template>
 <script>
 export default {
